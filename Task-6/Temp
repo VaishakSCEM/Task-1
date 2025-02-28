@@ -1,1 +1,13 @@
-.
+module comparator_2bit (
+    input [1:0] A,   // 2-bit input A
+    input [1:0] B,   // 2-bit input B
+    output A_gt_B,   // A > B (Green LED)
+    output A_lt_B,   // A < B (Red LED)
+    output A_eq_B    // A = B (Yellow LED)
+);
+    
+    assign A_gt_B = (A > B) ? 1 : 0;  // Green LED
+    assign A_lt_B = (A < B) ? 1 : 0;  // Red LED
+    assign A_eq_B = (A == B) ? 1 : 0; // Yellow LED
+
+endmodule
